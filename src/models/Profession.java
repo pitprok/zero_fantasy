@@ -12,12 +12,12 @@ import java.util.List;
 
 
 /**
- * The persistent class for the class database table.
+ * The persistent class for the profession database table.
  * 
  */
 @Entity
-@NamedQuery(name="Class.findAll", query="SELECT c FROM Class c")
-public class Class implements Serializable {
+@NamedQuery(name="Profession.findAll", query="SELECT p FROM Profession p")
+public class Profession implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
@@ -36,12 +36,12 @@ public class Class implements Serializable {
 	private int speed;
 
 	//bi-directional many-to-one association to Player
-	@OneToMany(mappedBy="clazz")
+	@OneToMany(mappedBy="profession")
 	@LazyCollection(LazyCollectionOption.FALSE)
 	@JsonIgnore
 	private List<Player> players;
 
-	public Class() {
+	public Profession() {
 	}
 
 	public int getId() {
@@ -110,14 +110,14 @@ public class Class implements Serializable {
 
 	public Player addPlayer(Player player) {
 		getPlayers().add(player);
-		player.setClazz(this);
+		player.setProfession(this);
 
 		return player;
 	}
 
 	public Player removePlayer(Player player) {
 		getPlayers().remove(player);
-		player.setClazz(null);
+		player.setProfession(null);
 
 		return player;
 	}

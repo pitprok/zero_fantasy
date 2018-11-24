@@ -32,10 +32,10 @@ public class Player implements Serializable {
 	@ManyToOne
 	private Alignment alignment;
 
-	//bi-directional many-to-one association to Class
+	//bi-directional many-to-one association to Profession
 	@ManyToOne
 	@JoinColumn(name="class_id")
-	private Class clazz;
+	private Profession profession;
 
 	public Player() {
 	}
@@ -104,12 +104,12 @@ public class Player implements Serializable {
 		this.alignment = alignment;
 	}
 
-	public Class getClazz() {
-		return this.clazz;
+	public Profession getProfession() {
+		return this.profession;
 	}
 
-	public void setClazz(Class clazz) {
-		this.clazz = clazz;
+	public void setProfession(Profession profession) {
+		this.profession = profession;
 	}
 
 }
