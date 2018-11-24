@@ -18,19 +18,6 @@
         http://www.springframework.org/schema/tx
         http://www.springframework.org/schema/tx/spring-tx.xsd">
 
-	<mvc:annotation-driven />
-
-
-
-
-	<context:component-scan
-		base-package="controllers" />
-	<context:component-scan base-package="models" />
-	<context:component-scan base-package="dao" />
-	
-<mvc:resources mapping="/resources/**" location="WEB-INF/resources/"/>
-<!-- <mvc:resources mapping="/js/**" location="WEB-INF/resources/js"/>-->
-
 	<bean
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<property name="prefix" value="/WEB-INF/jsp/" />
@@ -64,8 +51,22 @@
 		class="org.springframework.orm.jpa.JpaTransactionManager">
 		<property name="entityManagerFactory" ref="em" />
 	</bean>
-	<tx:annotation-driven />
+	
+		<tx:annotation-driven />
+		
+		
+	<mvc:annotation-driven />
 
+
+
+
+	<context:component-scan
+		base-package="controllers" />
+	<context:component-scan base-package="models" />
+	<context:component-scan base-package="dao" />
+	
+<mvc:resources mapping="/resources/**" location="WEB-INF/resources/"/>
+		
 
 	<!-- <bean id="messageSource" class="org.springframework.context.support.ReloadableResourceBundleMessageSource"> 
 		<property name="basename" value="/WEB-INF/message_en" /> <property name="defaultEncoding" 
