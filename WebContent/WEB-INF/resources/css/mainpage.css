@@ -1,3 +1,69 @@
+
+
+#maintext {
+	height: 40vh;
+	overflow: auto;
+	overflow-x: hidden;
+}
+
+#choices {
+	display: inline-block;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+#button {
+	/*background-color: Green;*/
+	background-color: #800000;
+	display: inline-block;
+	position: absolute;
+	/*    top:35%;
+        right:12%;*/
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	height: 100%;
+	/*    min-width:23vh;
+        font-size:10em;*/
+	width: 50%;
+	color: white;
+	font-weight: bold;
+}
+
+
+
+* {
+	color: white;
+	text-rendering: optimizeLegibility;
+}
+
+body, html {
+	background-color: #000;
+	color: #fff;
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+
+canvas {
+	position: absolute;
+	top: 0;
+	left: 0
+}
+
+
+
+.centeredtext {
+	text-align: center;
+}
+
+
+
+/*
 .bootstrapcolumn {
 	border: solid 5px;
 }
@@ -38,71 +104,10 @@
 	overflow-x: hidden;
 }
 
-#maintext {
-	height: 40vh;
-	overflow: auto;
-	overflow-x: hidden;
-}
-
-#choices {
-	display: inline-block;
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-}
-
-#button {
-	/*background-color: Green;*/
-	background-color: #800000;
-	display: inline-block;
-	position: absolute;
-	/*    top:35%;
-        right:12%;*/
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	height: 100%;
-	/*    min-width:23vh;
-        font-size:10em;*/
-	width: 50%;
-	color: black;
-}
-
-.centeredtext {
-	text-align: center;
-}
-
-* {
-	color: white;
-	text-rendering: optimizeLegibility;
-}
-
-body, html {
-	background-color: #000;
-	color: #fff;
-	width: 100%;
-	height: 100%;
-	margin: 0;
-	padding: 0;
-	overflow: hidden;
-}
-
-canvas {
-	position: absolute;
-	top: 0;
-	left: 0
-}
-
-
-.someDivOverlay {
-	background: rgba(70, 72, 82, 0.65)
-}
-
 .bootstrapcolumn, .bootstrapmainsubcolumnleft,
 	.bootstrapmainsubcolumnbottom, .bootstrapmainsubcolumnright,
 	.bootstrapmaincolumn, .bootstrapmainbottomcolumnright,
 	.bootstrapmainbottomcolumnleft {
-	border-color: #333333;
+	border-color: rgba(70, 72, 82, 0.65);
 }
-
+*/
