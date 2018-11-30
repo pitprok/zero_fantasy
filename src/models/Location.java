@@ -23,23 +23,23 @@ public class Location implements Serializable {
 
 	@Column(name="first_choice")
 	private String firstChoice;
-	@Lob
+	
 	@Column(name="first_consequence_code",columnDefinition = "json")
-	private Object firstConsequenceCode;
+	private String firstConsequenceCode;
 	
 	@Column(name="first_consequence_text")
 	private String firstConsequenceText;
-	@Lob
+	
 	@Column(name="location_json",columnDefinition = "json")
-	private Object locationJson;
+	private String locationJson;
 
 	private String name;
 
 	@Column(name="second_choice")
 	private String secondChoice;
-	@Lob
+	
 	@Column(name="second_consequence_code",columnDefinition = "json")
-	private Object secondConsequenceCode;
+	private String secondConsequenceCode;
 
 	@Column(name="second_consequence_text")
 	private String secondConsequenceText;
@@ -79,11 +79,11 @@ public class Location implements Serializable {
 		this.firstChoice = firstChoice;
 	}
 
-	public Object getFirstConsequenceCode() {
+	public String getFirstConsequenceCode() {
 		return this.firstConsequenceCode;
 	}
 
-	public void setFirstConsequenceCode(Object firstConsequenceCode) {
+	public void setFirstConsequenceCode(String firstConsequenceCode) {
 		this.firstConsequenceCode = firstConsequenceCode;
 	}
 
@@ -95,11 +95,11 @@ public class Location implements Serializable {
 		this.firstConsequenceText = firstConsequenceText;
 	}
 
-	public Object getLocationJson() {
+	public String getLocationJson() {
 		return this.locationJson;
 	}
 
-	public void setLocationJson(Object locationJson) {
+	public void setLocationJson(String locationJson) {
 		this.locationJson = locationJson;
 	}
 
@@ -119,11 +119,11 @@ public class Location implements Serializable {
 		this.secondChoice = secondChoice;
 	}
 
-	public Object getSecondConsequenceCode() {
+	public String getSecondConsequenceCode() {
 		return this.secondConsequenceCode;
 	}
 
-	public void setSecondConsequenceCode(Object secondConsequenceCode) {
+	public void setSecondConsequenceCode(String secondConsequenceCode) {
 		this.secondConsequenceCode = secondConsequenceCode;
 	}
 

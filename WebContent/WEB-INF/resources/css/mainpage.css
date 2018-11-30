@@ -4,29 +4,27 @@
 
 .bootstrapmaincolumn {
 	border-top: solid 2px;
-	border-bottom: solid 2px;
 	border-left: solid 17px;
 	border-right: solid 17px;
 }
 
 .bootstrapmainsubcolumnleft {
-	border-top: solid 2px;
+	
 	border-bottom: solid 2px;
 	border-left: solid 17px;
-	border-right: solid 2px;
+	
 	text-align: center;
 }
 
 .bootstrapmainsubcolumnright {
-	border-top: solid 2px;
+	
 	border-bottom: solid 2px;
-	border-left: solid 2px;
+	
 	border-right: solid 17px;
 	text-align: center;
 }
 
 .bootstrapmainbottomcolumnright {
-	border-left: solid 2px;
 	border-right: solid 17px;
 	text-align: center;
 	overflow: auto;
@@ -35,7 +33,6 @@
 
 .bootstrapmainbottomcolumnleft {
 	border-left: solid 17px;
-	border-right: solid 2px;
 	text-align: center;
 	overflow: auto;
 	overflow-x: hidden;

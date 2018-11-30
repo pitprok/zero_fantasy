@@ -46,7 +46,7 @@ public class UserDAO {
 			return false;
 		}
 
-		public List<User> selectMembers(String searchWord) {
+		public List<User> selectUser(String searchWord) {
 
 			String sql = "SELECT user FROM User user WHERE user.username LIKE :username";
 			Query query = this.em.createQuery(sql, User.class).setParameter("username", "%" + searchWord + "%");

@@ -17,8 +17,9 @@ public class LocationDAO {
 	private EntityManager em;
 	
 	public List<Location> selectLocation(String locationCode) {
-
-		String sql = "SELECT * FROM location where json_CONTAINS(location_json, '{\"location_code\" : \"A\"}')";
+		System.out.println(locationCode);
+		String sql = "SELECT * FROM location where json_CONTAINS(location_json, '{\"location_code\" : \""+locationCode+"\"}')";
+		System.out.println(sql);
 		List<Location> locationList = (List<Location>) this.em.createNativeQuery(sql, Location.class).getResultList();
 		return locationList;
 	}
