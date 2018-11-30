@@ -6,8 +6,6 @@ import javax.persistence.*;
 import org.hibernate.annotations.LazyCollection;
 import org.hibernate.annotations.LazyCollectionOption;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-
 import java.util.List;
 
 
@@ -25,11 +23,10 @@ public class Alignment implements Serializable {
 
 	private String name;
 
-	//bi-directional many-to-one association to Player
+	//bi-directional many-to-one association to User
 	@OneToMany(mappedBy="alignment")
-	@LazyCollection(LazyCollectionOption.FALSE)
-	@JsonIgnore
-	private List<Player> players;
+	 @LazyCollection(LazyCollectionOption.FALSE)
+	private List<User> users;
 
 	public Alignment() {
 	}
@@ -50,26 +47,26 @@ public class Alignment implements Serializable {
 		this.name = name;
 	}
 
-	public List<Player> getPlayers() {
-		return this.players;
+	public List<User> getUsers() {
+		return this.users;
 	}
 
-	public void setPlayers(List<Player> players) {
-		this.players = players;
+	public void setUsers(List<User> users) {
+		this.users = users;
 	}
 
-	public Player addPlayer(Player player) {
-		getPlayers().add(player);
-		player.setAlignment(this);
+	public User addUser(User user) {
+		getUsers().add(user);
+		user.setAlignment(this);
 
-		return player;
+		return user;
 	}
 
-	public Player removePlayer(Player player) {
-		getPlayers().remove(player);
-		player.setAlignment(null);
+	public User removeUser(User user) {
+		getUsers().remove(user);
+		user.setAlignment(null);
 
-		return player;
+		return user;
 	}
 
 }

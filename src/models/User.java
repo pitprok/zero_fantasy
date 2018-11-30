@@ -5,12 +5,12 @@ import javax.persistence.*;
 
 
 /**
- * The persistent class for the player database table.
+ * The persistent class for the user database table.
  * 
  */
 @Entity
-@NamedQuery(name="Player.findAll", query="SELECT p FROM Player p")
-public class Player implements Serializable {
+@NamedQuery(name="User.findAll", query="SELECT u FROM User u")
+public class User implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
@@ -22,11 +22,15 @@ public class Player implements Serializable {
 
 	private int attack;
 
+	@Lob
+	@Column(name="current_location")
+	private String currentLocation;
+
 	private int hitpoints;
 
-	private String name;
-
 	private int speed;
+
+	private String username;
 
 	//bi-directional many-to-one association to Alignment
 	@ManyToOne
@@ -37,7 +41,7 @@ public class Player implements Serializable {
 	@JoinColumn(name="class_id")
 	private Profession profession;
 
-	public Player() {
+	public User() {
 	}
 
 	public int getId() {
@@ -72,6 +76,14 @@ public class Player implements Serializable {
 		this.attack = attack;
 	}
 
+	public String getCurrentLocation() {
+		return this.currentLocation;
+	}
+
+	public void setCurrentLocation(String currentLocation) {
+		this.currentLocation = currentLocation;
+	}
+
 	public int getHitpoints() {
 		return this.hitpoints;
 	}
@@ -80,20 +92,20 @@ public class Player implements Serializable {
 		this.hitpoints = hitpoints;
 	}
 
-	public String getName() {
-		return this.name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
-	}
-
 	public int getSpeed() {
 		return this.speed;
 	}
 
 	public void setSpeed(int speed) {
 		this.speed = speed;
+	}
+
+	public String getUsername() {
+		return this.username;
+	}
+
+	public void setUsername(String username) {
+		this.username = username;
 	}
 
 	public Alignment getAlignment() {

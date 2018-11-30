@@ -9,7 +9,7 @@ import javax.persistence.Query;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
-import models.Player;
+import models.User;
 
 @Repository
 public class PlayerDAO {
@@ -28,29 +28,29 @@ public class PlayerDAO {
 
 		}
 
-		public List<Player> selectAllMembers() {
+		public List<User> selectAllMembers() {
 
 			String sql = "SELECT * FROM user";
-			List<Player> userList = (List<Player>) this.em.createNativeQuery(sql, Player.class).getResultList();
+			List<User> userList = (List<User>) this.em.createNativeQuery(sql, User.class).getResultList();
 			return userList;
 		}
 
-		public boolean userLogin(Player player) {
+		public boolean userLogin(User player) {
 
 			String sql = "SELECT user FROM User user WHERE user.username=:username";
-			Query query = this.em.createQuery(sql, Player.class);
-//			query.setParameter("username", [player.getUsername());
-			List<Player> userList = (List<Player>) query.getResultList();
+			Query query = this.em.createQuery(sql, User.class);
+//			query.setParameter("username", [user.getUsername());
+			List<User> userList = (List<User>) query.getResultList();
 		
 
 			return false;
 		}
 
-		public List<Player> selectMembers(String searchWord) {
+		public List<User> selectMembers(String searchWord) {
 
 			String sql = "SELECT user FROM User user WHERE user.username LIKE :username";
-			Query query = this.em.createQuery(sql, Player.class).setParameter("username", "%" + searchWord + "%");
-			List<Player> userList = (List<Player>) query.getResultList();
+			Query query = this.em.createQuery(sql, User.class).setParameter("username", "%" + searchWord + "%");
+			List<User> userList = (List<User>) query.getResultList();
 			return userList;
 		}
 
@@ -59,24 +59,24 @@ public class PlayerDAO {
 		public void deleteMembers(String username) {
 //	        em.getTransaction().begin();
 //	        em.merge(member);
-			Player userToDelete = em.find(Player.class, username);
+			User userToDelete = em.find(User.class, username);
 			em.remove(userToDelete);
 //	        em.flush();
 //	        em.getTransaction().commit();
 		}
 		
 		@Transactional
-		public Player findMember(String username) {
+		public User findMember(String username) {
 //	        em.getTransaction().begin();
 //	        em.merge(member);
-			Player member = em.find(Player.class, username);
+			User user = em.find(User.class, username);
 //	        em.flush();
 //	        em.getTransaction().commit();
-			return member;
+			return user;
 		}
 
 		@Transactional
-		public void insert(Player member) {
+		public void insert(User member) {
 			EntityManager em=getEntityManager();
 //	        em.getTransaction().begin();
 			em.persist(member);

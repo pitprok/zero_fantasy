@@ -6,8 +6,6 @@ import javax.persistence.*;
 import org.hibernate.annotations.LazyCollection;
 import org.hibernate.annotations.LazyCollectionOption;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-
 import java.util.List;
 
 
@@ -37,8 +35,7 @@ public class Creature implements Serializable {
 
 	//bi-directional many-to-one association to Monster
 	@OneToMany(mappedBy="creature")
-	@LazyCollection(LazyCollectionOption.FALSE)
-	@JsonIgnore
+	 @LazyCollection(LazyCollectionOption.FALSE)
 	private List<Monster> monsters;
 
 	public Creature() {

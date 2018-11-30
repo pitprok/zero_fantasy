@@ -59,7 +59,7 @@ public class GeneralController {
 	}
 
 	@RequestMapping(value = "/insert")
-	public ModelAndView insertUser(Player player, ModelAndView modelAndView, HttpServletRequest request, String password2) {
+	public ModelAndView insertUser(User player, ModelAndView modelAndView, HttpServletRequest request, String password2) {
 //      (To be fixed)modelAndView.setView(new RedirectView(request.getContextPath()+"/jsp-name"));
 
 
@@ -73,7 +73,7 @@ public class GeneralController {
 	@RequestMapping(value = "/loginform")
 	public ModelAndView userLogin(ModelAndView modelAndView) {
 //      (To be fixed)modelAndView.setViewName("jsp-name");
-		Player player = new Player();
+		User player = new User();
 		modelAndView.addObject("user", player);
 
 		return modelAndView;
@@ -81,7 +81,7 @@ public class GeneralController {
 
 	@RequestMapping(value = "/registrationform")
 	public ModelAndView insertUserForm(ModelAndView modelAndView) {
-		Player player = new Player();
+		User player = new User();
 //      (To be fixed)modelAndView.setViewName("registration-jsp-name");
 		modelAndView.addObject("user", player);
 

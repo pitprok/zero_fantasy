@@ -3,8 +3,9 @@
 	<persistence-unit name="project_zf">
 		<class>models.Alignment</class>
 		<class>models.Creature</class>
+		<class>models.Location</class>
 		<class>models.Monster</class>
-		<class>models.Player</class>
 		<class>models.Profession</class>
+		<class>models.User</class>
 	</persistence-unit>
 </persistence>
