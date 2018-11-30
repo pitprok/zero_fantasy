@@ -17,7 +17,8 @@ import org.springframework.web.servlet.view.RedirectView;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-import dao.PlayerDAO;
+import dao.LocationDAO;
+import dao.UserDAO;
 import models.*;
 
 
@@ -26,9 +27,11 @@ public class GeneralController {
 
 	@Autowired
 //	@Qualifier("hsdl")
-	PlayerDAO playerDAO;
+	UserDAO userDAO;
 
-
+	@Autowired
+//	@Qualifier("hsdl")
+	LocationDAO locationDAO;
 
 	@RequestMapping("/")
 	public String index() {
@@ -42,8 +45,13 @@ public class GeneralController {
 	}
 	
 	@RequestMapping("/test")
-	public String test() {
-		return "test";
+	public ModelAndView test(ModelAndView modelAndView) {
+		Location location=new Location();
+		List <Location> locationList=locationDAO.selectLocation("A");
+		modelAndView.addObject("location",locationList.get(0));
+		modelAndView.setViewName("test");
+
+		return modelAndView;
 	}
 
 

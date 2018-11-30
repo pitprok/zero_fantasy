@@ -12,19 +12,19 @@ import org.springframework.transaction.annotation.Transactional;
 import models.User;
 
 @Repository
-public class PlayerDAO {
+public class UserDAO {
 	
 
 		@PersistenceContext
 		private EntityManager em;
 		
 
-		public PlayerDAO(EntityManager em) {
+		public UserDAO(EntityManager em) {
 			this.em = em;
 		}
 
 
-		public PlayerDAO() {
+		public UserDAO() {
 
 		}
 
