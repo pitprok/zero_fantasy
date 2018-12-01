@@ -1,1 +1,1 @@
-web: java -jar target/project_zf.war
+web: java -jar \target\dependency\webapp-runner.jar
