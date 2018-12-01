@@ -12,6 +12,9 @@
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
+	height:15vh;
+	width:28vw;
+	overflow-x: hidden;
 }
 
 #button {
@@ -30,6 +33,7 @@
 	width: 50%;
 	color: white;
 	font-weight: bold;
+	
 }
 
 

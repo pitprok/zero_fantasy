@@ -39,12 +39,12 @@
 		<div class="row" style="height: 5vh"></div>
 		<div class="row" style="height: 66vh">
 			<div class="col-2 bootstrapcolumn">
-				<div style="font-family: Lato">&nbsp;</div>
+			<!--	<div style="font-family: Lato">&nbsp;</div>-->
 			</div>
 			<div class="col-8 bootstrapcolumn" ng-repeat="x in myData">
-				<div id="mainbackground"
+				<div class="col-12" id="mainbackground"
 					style="background-image: url('{{ x.backgroundUrl }}');">
-					<div class="someDivOverlay">
+					<div  class="col-12" class="someDivOverlay">
 						<div class="row " style="height: 45vh">
 
 							<div class="col-12 bootstrapmaincolumn wth centeredtext ">

@@ -47,18 +47,18 @@
 	position: absolute;
 	bottom: 55vh;
 	text-align: center;
-	font-size: calc(1vw + 1vh);
+	font-size: calc(0.9vw + 0.9vh);
 }
 
 table.table-bordered>tbody>tr>th {
 	border: 3px solid #800000;
-	font-size: calc(1vw + 1vh)
+	font-size: calc(0.9vw + 0.9vh)
 }
 
 table.table-bordered>tbody>tr>td {
 	border: 3px solid #800000;
 		font-weight: bold;
-	font-size: calc(1vw + 1vh)
+	font-size: calc(0.9vw + 0.9vh)
 }
 
 table.table-bordered>tbody>tr>#hitpointsRow {
@@ -109,12 +109,12 @@ table.table-bordered>tbody>tr>#accuracyRow {
 	<div class="container-fluid .smooth-scroll">
 		<div class="row" style="height: 5vh">
 
-			<div style="font-family: Lato">&nbsp;</div>
+		<!--	<div style="font-family: Lato">&nbsp;</div>  -->
 
 		</div>
 		<div class="row" style="height: 66vh">
-			<div class="col-2 bootstrapcolumn" id="stats">
-				<p id="playerName">
+			<div class="col-3 bootstrapcolumn" id="stats">
+				<p class="text-center" id="playerName">
 					<strong>${player.username}</strong>
 				</p>
 
@@ -162,12 +162,12 @@ table.table-bordered>tbody>tr>#accuracyRow {
 
 					<div class="row" style="height: 15vh">
 						<div class="col-6 bootstrapmainbottomcolumnleft centeredtext ">
-							<p id="choices">${location.firstChoice}</p>
+							<p class="text-center" id="choices">${location.firstChoice}</p>
 						</div>
 
 
 						<div class="col-6 bootstrapmainbottomcolumnright centeredtext ">
-							<p id="choices">${location.secondChoice}</p>
+							<p class="text-center" id="choices">${location.secondChoice}</p>
 						</div>
 					</div>
 
@@ -186,7 +186,7 @@ table.table-bordered>tbody>tr>#accuracyRow {
 					</div>
 				</div>
 			</div>
-			<div class="col-2 bootstrapcolumn"></div>
+			<div class="col-1 bootstrapcolumn"></div>
 		</div>
 
 
