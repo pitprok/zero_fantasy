@@ -52,13 +52,13 @@
 
 table.table-bordered>tbody>tr>th {
 	border: 3px solid #800000;
-	font-size: calc(1.1vw + 1.1vh)
+	font-size: calc(1vw + 1vh)
 }
 
 table.table-bordered>tbody>tr>td {
 	border: 3px solid #800000;
 		font-weight: bold;
-	font-size: calc(1.1vw + 1.1vh)
+	font-size: calc(1vw + 1vh)
 }
 
 table.table-bordered>tbody>tr>#hitpointsRow {
