@@ -45,7 +45,7 @@ public class GeneralController {
 
 		List<Location> locationList = locationDAO.selectLocation((String) session.getAttribute("currentLocation"));
 		List<User> userList = userDAO.selectUser((String) session.getAttribute("username"));
-		
+		System.out.println("ok");
 		session.setAttribute("location", locationList.get(0));
 		session.setAttribute("player", userList.get(0));
 		
