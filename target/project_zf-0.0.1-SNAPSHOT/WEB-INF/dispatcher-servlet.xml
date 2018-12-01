@@ -25,12 +25,15 @@
 	</bean>
 
 
-	<bean id="dataSource"
-		class="org.springframework.jndi.JndiObjectFactoryBean">
-		<property name="jndiName"
-			value="java:comp/env/jdbc/zfpool" />
-	</bean>
 
+
+    <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+      <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
+      <property name="url" value="jdbc:mysql://5.10.109.53:3307/debianp_zerofantasy"/>
+      <property name="username" value="debia_user"/>
+      <property name="password" value="asdf@ZF!"/>
+    </bean>
+    
 
 	<bean id='em'
 		class='org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean'>
