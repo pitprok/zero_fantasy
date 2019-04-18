@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<Context path="/project_zf">
-     <Resource name="jdbc/zfpool" auth="Container"
-              type="javax.sql.DataSource" maxTotal="100" maxIdle="30"
-              maxWaitMillis="10000" username="debia_user" password="asdf@ZF!"
-              driverClassName="com.mysql.jdbc.Driver"
-              url="jdbc:mysql://5.10.109.53:3307/debianp_zerofantasy"
-              validationQuery="select * from profession" />
-</Context>
